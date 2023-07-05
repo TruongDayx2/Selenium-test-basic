@@ -81,7 +81,7 @@ def AddCustomer():
 
     for index, row in df.iterrows():
         print(index)
-        time.sleep(5)
+        time.sleep(1)
         
         addBtn = browser.find_element(By.ID,'button-button-LOS_Search_Customer:Button1')
         addBtn.click()
@@ -92,8 +92,8 @@ def AddCustomer():
         # Fill data add customer
         cus_name = browser.find_element(By.ID,'text-input-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:CUS_NAME')
         cus_name.clear()
-        if not math.isnan(row[0]):
-            cus_name.send_keys(row[0])
+        # if not math.isnan(row[0]):
+        cus_name.send_keys(row[0])
 
         cus_phone = browser.find_element(By.ID,'text-input-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:CUS_PHONE')
         cus_phone.clear()
@@ -102,8 +102,8 @@ def AddCustomer():
 
         cus_email = browser.find_element(By.ID,'text-input-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:CUS_EMAIL')
         cus_email.clear()
-        if not math.isnan(row[2]):
-            cus_email.send_keys(row[2])
+        # if not math.isnan(row[2]):
+        cus_email.send_keys(row[2])
 
         browser.find_element(By.ID,'singleselect-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:RETRICTION_TYPE').click()
         if (row[3] =='Không cấp tín dụng'):
@@ -115,8 +115,8 @@ def AddCustomer():
 
         cus_cif = browser.find_element(By.ID,'text-input-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:CUS_CIF')
         cus_cif.clear()
-        if not math.isnan(row[4]):
-            cus_cif.send_keys(row[4])
+        # if not math.isnan(row[4]):
+        cus_cif.send_keys(row[4])
 
         cus_id = browser.find_element(By.ID,'text-input-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:CUS_ID')
         cus_id.clear()
@@ -125,8 +125,8 @@ def AddCustomer():
 
         cus_bir = browser.find_element(By.ID,'datetimepicker-input-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:CUS_BIRTH')
         cus_bir.clear()
-        if not math.isnan(row[6]):
-            cus_bir.send_keys(row[6])
+        # if not math.isnan(row[6]):
+        cus_bir.send_keys(row[6])
 
         browser.find_element(By.ID,'singleselect-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:CUS_TARGET_GROUP').click()
         if (row[7]=='Không'):
@@ -138,23 +138,23 @@ def AddCustomer():
 
         cus_ad = browser.find_element(By.ID,'text-input-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:CUS_PERMANENT_ADDRESS')
         cus_ad.clear()
-        if not math.isnan(row[8]):
-            cus_ad.send_keys(row[8])
+        # if not math.isnan(row[8]):
+        cus_ad.send_keys(row[8])
 
         cus_a = browser.find_element(By.ID,'text-input-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:CUS_CURRENT_ADDRESS')
         cus_a.clear()
-        if not math.isnan(row[9]):
-            cus_a.send_keys(row[9])
+        # if not math.isnan(row[9]):
+        cus_a.send_keys(row[9])
 
         cus_a1 = browser.find_element(By.ID,'text-input-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:CUS_TITLE_NAME')
         cus_a1.clear()
-        if not math.isnan(row[10]):
-            cus_a1.send_keys(row[10])
+        # if not math.isnan(row[10]):
+        cus_a1.send_keys(row[10])
 
         cus_aN = browser.find_element(By.ID,'textarea-textarea-LOS_Search_Table_Result_Customer:LOS_POPUP_RESTRICTED_CUST1:CUS_NOTE')
         cus_aN.clear()
-        if not math.isnan(row[11]):
-            cus_aN.send_keys(row[11])
+        # if not math.isnan(row[11]):
+        cus_aN.send_keys(row[11])
 
         
         browser.save_screenshot('popUpAdd.png')
